@@ -1,0 +1,470 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: #e1edee;
+    overflow-x: hidden;
+    z-index: -2;
+    color: #05445E;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.intro{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/pexels-nataliya-vaitkevich-5863391.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: intro 3s 1 forwards;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+@keyframes intro {
+    0%{ opacity: 1; }
+    10%{ opacity: 1;}
+    40%{
+        filter: none;
+    }
+    50%{
+        opacity: 1;
+        filter: blur(1px);
+    }
+    90%{
+        opacity: 0.05;
+        filter: blur(10px);
+    }
+    99%{
+        opacity: 0;
+        z-index: 1;
+        display: block;
+        filter: blur(15px);
+    }
+    100%{
+        z-index: -2;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.corner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: -5;
+}
+
+.corner svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 413px;
+    transform: rotateY(180deg);
+}
+
+.corner .shape-fill {
+    fill: #75E6DA;
+}
+p{
+    z-index: 6;
+    line-height: 40px;
+}
+th{
+    z-index: 50;
+    padding: 0 5%;
+}
+a{
+    z-index: 100;
+    box-sizing: border-box;
+    padding: 5%;
+    text-decoration: none;
+    color: #05445E;
+}
+header{
+    text-align: center;
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    line-height: 30px;
+}
+table{
+    padding: 20px 0px;
+    z-index: 4;
+    text-align: center;
+    width: 100vw;
+}
+
+
+.topt{
+    margin-top: 100px;
+    font-size: 25px;
+    line-height: 20px;
+    height: 55vh;
+    width: 50vw;
+    text-align: center;
+}
+.coronatext{
+    width: 100%;
+    min-height: 700px;
+    border: 3px rgba(138, 17, 17, 0) solid;
+}
+.coronatext img{
+    width: 30vw;
+    float: right;
+}
+.coronatext p{
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    margin: 10% 40% 15% 10%;
+}
+
+.itis p{
+    margin-top: 20px;
+    font-size: 30px;
+    
+    position: relative;
+}
+.itis .p1{
+    margin-left: 20%;
+}
+.itis .p2{
+    margin-left: 30%;
+}
+.itis .p3{
+    margin-left: 40%;
+    
+}
+.itis .p4{
+    margin-left: 50%;
+}
+.itis span{
+    display: inline-block;
+    color: rgb(129, 0, 0);
+    position: relative;
+    font-weight: bold;
+}
+.p4 span{
+    color: #75E6DA;
+}
+span:hover{
+    animation: shake 1s linear infinite;
+}
+@keyframes shake {
+    10%{transform: rotate(3deg) translateY(1px)
+        translateX(1px);}
+    30%{transform: rotate(-3deg) translateY(2px)
+        translateX(1px);}
+    50%{transform: rotate(2deg) translateY(-1px)
+        translateX(3px);}
+    80%{transform: rotate(-1deg) translateY(0px)
+        translateX(1px);}
+    100%{transform: rotate(2deg) translateY(0px)
+        translateX(0px);}
+                                            
+    }   
+    .stopcovid{
+        margin-top: 50px;
+        width: 100%;
+        height: 100vh;
+        background-image: url(./images/pexels-cottonbro-3951600.jpg);
+        background-position-x:center ;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+.vaccinate{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    border: 1px rgba(255, 0, 0, 0) solid;
+}
+.vaccinate img{
+    width: 450px;
+    float: left;
+
+}
+.vaccinate .invac{
+    width: 30vw;
+    height: 60vh;
+    background-color: #A9CEE8;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    z-index: -1;
+}
+.vaccinate h1{
+    color:#189AB4;
+    text-align: left;
+}
+.vaccinate p{font-size: 30px;
+    text-align: left;
+    margin: 50px;
+
+}
+.tinvac{
+    margin-top: 15%;
+}
+footer{
+    background-color: #189AB4;
+    min-height: 200px;
+    font-size: 25px;
+}
+footer ul{
+    display: flex;
+    list-style-type: none;
+    width: 100vw;
+    margin-top: 30px;
+    align-content: center;
+    justify-content: center;
+}
+li{
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Types */
+.pretypes{
+    z-index: 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.pretypes p{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+
+.containertypes{
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.containertypes section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+.introtypes{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/vaccine-5895477_960_720.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: intro 3s 1 forwards;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+section.tvaccin p{
+    margin: auto;
+    z-index: 2;
+}
+
+section.tvaccin{
+    position: relative;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+section.tvaccin h1{
+    margin: auto;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+}
+
+.tmidl{
+margin: auto 50px;
+position: absolute;
+left: 0px;
+top: 20%;
+width: 50%;
+height: 60vh;
+background-color: #A9CEE8;
+}
+.tmidr{
+    margin: auto 50px;
+position: absolute;
+right: 0px;
+top: 20%;
+width: 40%;
+height: 60vh;
+background-color: #189AB4;
+}
+.ttop{
+    margin: auto;
+position: absolute;
+left: 0px;
+top: 0;
+width: 50%;
+height: 50vh;
+background-color: #A9CEE8;
+}
+.tbot{
+    margin: auto;
+position: absolute;
+right: 0px;
+bottom: 0;
+width: 40%;
+height: 40vh;
+background-color: #189AB4;
+}
+section footer{
+    height: 100vh;
+}
+section footer img{
+    width: 100%;
+    height: 90vh;
+}
+/* Procces */
+.pro{
+    min-height: 900px;
+}
+.pro p{
+    font-size: 30px;
+    margin: 10px;
+}
+.pro img{
+    width: 70%;
+}
+.prol{
+    float: left;
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+.pror{
+    text-align: right;
+    float: left;
+    width: 50%;
+    min-height: 100%;
+}
+
+
+/* Contact */
+.contactintro{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./images/pexels-alex-andrews-821754.jpg);
+    background-size: cover;
+    background-position: center;
+    animation: intro 3s 1 forwards;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.contact{
+    width: 100%;
+
+}
+
+.contactbg{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./images/circle-scatter-haikei.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    z-index: -6;
+}
+form{
+    margin: 20px;
+    margin-top: -82px;
+    align-content: center;
+    position: relative;
+    bottom: 50px;
+}
+input{
+    margin: 1px 30px;
+    padding: 5px;
+    
+}
+label{
+    position: relative;
+}
+textarea{
+    margin-left: 30px ;
+}
+@media screen and (max-width: 850px) {
+    body{
+        overflow-x: hidden;
+    }
+    .coronatext img{
+        float: none;
+        width: 100%;
+        margin: 0px;
+        
+    }
+    .coronatext p{
+        padding: 0px;
+        font-size: 30px;
+        margin: 0;
+    }
+    .vaccinate img{
+        width: 250px;
+        
+    
+    }
+    .vaccinate p{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+} 
+@media screen and (max-width: 400px) {
+    body{
+        overflow-x: hidden;
+    }
+    .topt{
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    .itis .p1{
+        margin: auto;
+    }
+    .itis .p2{
+        margin: auto;
+    }
+    .itis .p3{
+        margin: auto;
+        
+    }
+    .itis .p4{
+        margin: auto;
+    }
+    footer li{
+        font-size: 20px;
+    }
+    section.tvaccin p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    section.tvaccin h1{
+        font-size: 30px;
+    }
+    .prol{
+        width: 100%;
+        float: none;
+    }
+    .pror{
+        width: 100%;
+        float: none;
+    }
+} 
